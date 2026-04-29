@@ -95,3 +95,46 @@ const listarCompany = async () => {
 };
 
 window.addEventListener("load",initDataTable);
+
+const string1 = " Con registros de ";
+const string2 = " Empresas ";
+const numero1 = 100;
+const bolena = true;
+const name = null;
+
+
+alert(string1+numero1 + string2);
+
+
+
+
+let contador = 1;
+
+        function aginput() {
+
+            let div = document.createElement("div");
+            div.className = "grupo";
+
+            if (contador % 2 === 1) {
+                div.style.backgroundColor = "#9b99b5"; 
+            } else {
+                div.style.backgroundColor = "#c2b8b6"; 
+            }
+
+
+            let label = document.createElement("label");
+            label.innerHTML = "Hijo numero: " + contador;
+
+    
+            div.appendChild(label);
+
+            document.getElementById("contenedor").appendChild(div);
+
+            contador++;
+        }
+
+        function reset() {
+            document.getElementById("contenedor").innerHTML = "";
+            contador = 1;
+        }
+
